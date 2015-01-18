@@ -91,7 +91,7 @@ class Posts_Model extends CI_Model {
         $this->db->join('we_canal', 'we_canal.ide_canal = we_evento.cod_canal'); // junta a tabela we_canal
         $this->db->join('we_cliente', 'we_cliente.ide_cliente = we_canal.cod_cliente'); // junta a tabela we_cliente
         $this->db->join('we_media', 'we_media.ide_media = we_post.cod_media', 'left'); // junta a tabela we_media
-        $this->db->join('we_localidade', 'we_localidade.ide_localidade = we_evento.cod_localidade'); // junta a tabela we_localidade
+        $this->db->join('we_localidade', 'we_localidade.ide_localidade = we_evento.cod_localidade', 'left'); // junta a tabela we_localidade
         $this->db->join('we_post_denuncia', ' we_post_denuncia.cod_post = we_post.ide_post', "left"); // junta a tabela we_post_denuncia
         $this->db->where("we_cliente.ide_cliente", $this->session->userdata("ide_cliente")); // onde o cliente for o mesmo do cliente em uso
         $this->db->order_by("ide_post", "desc"); // ordena pelo id
@@ -157,7 +157,7 @@ class Posts_Model extends CI_Model {
         $this->db->join('we_canal', 'we_canal.ide_canal = we_evento.cod_canal'); // junta a tabela we_canal
         $this->db->join('we_cliente', 'we_cliente.ide_cliente = we_canal.cod_cliente'); // junta a tabela we_cliente
         $this->db->join('we_media', 'we_media.ide_media = we_post.cod_media', 'left'); // junta a tabela we_media
-        $this->db->join('we_localidade', 'we_localidade.ide_localidade = we_evento.cod_localidade'); // junta a tabela we_localidade
+        $this->db->join('we_localidade', 'we_localidade.ide_localidade = we_evento.cod_localidade', 'left'); // junta a tabela we_localidade
         $this->db->where("we_cliente.ide_cliente", $this->session->userdata("ide_cliente")); // onde o cliente for o mesmo do cliente em uso
         $this->db->where("we_post.ide_post", $id); // onde o o id do post seja igual ao id passado
         $this->db->order_by("ide_post", "asc"); // ordenando pelo id
@@ -184,7 +184,7 @@ class Posts_Model extends CI_Model {
         $this->db->join('we_canal', 'we_canal.ide_canal = we_evento.cod_canal'); // junta a tabela we_canal
         $this->db->join('we_cliente', 'we_cliente.ide_cliente = we_canal.cod_cliente'); // junta a tabela we_cliente
         $this->db->join('we_media', 'we_media.ide_media = we_post.cod_media', 'left'); // junta a tabela we_media
-        $this->db->join('we_localidade', 'we_localidade.ide_localidade = we_evento.cod_localidade'); // junta a tabela we_localidade
+        $this->db->join('we_localidade', 'we_localidade.ide_localidade = we_evento.cod_localidade', 'left'); // junta a tabela we_localidade
         $this->db->where("we_cliente.ide_cliente", $this->session->userdata("ide_cliente")); // onde o cliente for o mesmo do cliente em uso
         $this->db->where("we_post.ide_post", $id); // onde o o id do post seja igual ao id passado
         $this->db->order_by("ide_post", "asc"); // ordenando pelo id
