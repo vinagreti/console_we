@@ -267,7 +267,7 @@ $config['sess_time_to_update']	= 300;
 */
 $domain_name = $_SERVER['HTTP_HOST'] ? $_SERVER['HTTP_HOST'] : $_SERVER['SERVER_NAME'];
 $config['cookie_prefix']	= "";
-$config['cookie_domain']	= $domain_name;
+$config['cookie_domain']	= '';
 $config['cookie_path']		= "/";
 $config['cookie_secure']	= FALSE;
 
