@@ -138,6 +138,12 @@ class Posts_Model extends CI_Model {
 
         }
 
+	$query_montada = "contar: " . !empty($contar) . " - query: " . $this->db->last_query();
+
+	$query_montada = preg_replace("/\n/"," ",$query_montada);
+
+	error_log($query_montada, 0);
+
         return $res; // retorna a resposta
 
     }
