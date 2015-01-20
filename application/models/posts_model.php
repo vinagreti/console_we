@@ -82,7 +82,7 @@ class Posts_Model extends CI_Model {
         $this->db->select('CONCAT(we_usuario.nom_usuario, " ", we_usuario.dsc_sobrenome) as vinculado', FALSE);   // humaniza e/ou define alias
         $this->db->select("we_evento.nom_evento as evento");   // humaniza e/ou define alias
         $this->db->select("we_media.flg_tipo_media as tipo_midia");   // humaniza e/ou define alias
-        $this->db->select("CONCAT('http://', we_media.dsc_url_servidor, REPLACE( REPLACE( REPLACE(we_media.flg_tipo_media, 'FT', '/uploads/images/') , 'VD', '/uploads/videos/') , 'AU', '/uploads/audios/'), we_media.nom_arquivo_media) as url_midia", FALSE);
+        $this->db->select("we_media.nom_arquivo_media as url_midia");
         $this->db->select("we_localidade.nom_localidade as localidade");   // humaniza e/ou define alias
         $this->db->select("we_canal.nom_canal as canal");   // humaniza e/ou define alias
         $this->db->select("we_post_denuncia.ide_post_denuncia as denuncia");   // humaniza e/ou define alias
